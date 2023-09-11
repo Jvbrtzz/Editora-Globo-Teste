@@ -1,0 +1,50 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 2em 0;
+    padding: 10px;
+}
+.ipt{
+    border-radius: 0;
+    border: none;
+    background-color: whitesmoke;
+    border-collapse: collapse;
+    padding: 10px;
+    margin: 20px;
+    width: 350px;
+    height: 60px;
+}
+.btn {
+    margin-left: 5px;
+    background-color: #222;
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+  .btn:hover {
+    color: #ffbb33;
+  }
+  p{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;  
+    margin-top: 10px;  
+    padding: 10px;
+    border: none;    
+    outline: none;
+    outline-style: none;
+    background-color: #ffbb33;
+  }
+  label{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-weight: bold;    
+    align-items: left;
+  }

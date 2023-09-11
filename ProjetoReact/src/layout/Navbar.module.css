@@ -1,0 +1,28 @@
+.ulNav{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+}
+.liNav{
+    list-style-type: none;
+}
+.liNav a{
+    display: flex;
+    flex-direction: row-reverse;    
+    padding: 20px;
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration-line: none;
+    color: white;
+    
+    
+}
+
+.liNav a:hover{
+    color: yellow;
+}

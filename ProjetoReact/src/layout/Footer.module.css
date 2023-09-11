@@ -1,0 +1,30 @@
+.foot{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 3em;
+    margin-top: 40%;
+}
+
+.footUl{
+    display: flex;
+    flex-direction: row;
+    padding: 3em;
+    list-style-type: none;
+
+}
+
+.footLi{
+    padding: 1em;
+}
+.footLi:hover{
+    color: yellow;
+}
+h2{
+    margin-top: 15px;
+}
