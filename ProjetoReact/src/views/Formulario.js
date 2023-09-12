@@ -1,23 +1,28 @@
 import styles from "./Formulario.module.css"
 import CampoTexto from "../Components/CampoTexto";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import api from '../service/api'
 
 function Formulario(){
-    useEffect(() =>{
-       
-    },[])
+    const [titulo, setTitulo] = useState('')
+    const [conteudo, setConteudo] = useState('')
+    const [data, setData] = useState('')
 
-
-    async function cadastrar(e){
-        const response = await api.post('/formulario',{
-            titulo,
-            conteudo,
-            data
-        })
-
-        e.preventDefault()
-    }
+    async function cadastrar(e) {
+        e.preventDefault();
+        try {
+          await api.post('/publicacoes', {
+            titulo: titulo,
+            conteudo: conteudo,
+            data: data
+          });
+          Addcard() 
+          console.log('Enviado');
+        } catch (err) {
+          console.error('Error:', err);
+        }
+      }
+      
 
     function  limpar(){
         let p = document.getElementById('formi')
@@ -27,17 +32,11 @@ function Formulario(){
         p.innerHTML = ""
         
     }    
-
-    const [titulo, setTitulo] = useState('')
-    const [conteudo, setConteudo] = useState('')
-    const [data, setData] = useState('')
-
     function Addcard(){
         const card = document.createElement('p')
-        card.innerHTML = `${titulo} e ${conteudo} e ${data}`
-        document.getElementById("formi").appendChild(card);  
+        card.innerHTML += `Notícia enviada com sucesso!`
+        document.getElementById("message").appendChild(card);  
     }
-
     return(
         <>             
         <form className={styles.form} onSubmit={cadastrar} >
@@ -75,10 +74,10 @@ function Formulario(){
             </div>
           
             <div>                               
-                <button className={styles.btn}onClick={()=> Addcard()}>cadastrar</button>
+                <button className={styles.btn}>cadastrar</button>
                 <button className={styles.btn}onClick={()=> limpar()}>Limpar</button>
             </div>
-            <div id="formi"></div>
+            <div id="message"></div>
         </form>
        
         </>
