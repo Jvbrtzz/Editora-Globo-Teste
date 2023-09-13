@@ -4,3 +4,12 @@
     justify-content: center;
     align-items: center;
 }
+.conteudo {
+    font-size: 24px; 
+    font-weight: normal; 
+    color: #666; 
+    margin: 10px 0; 
+    text-align: left;
+    width: 900px;
+
+}

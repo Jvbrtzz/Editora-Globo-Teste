@@ -28,7 +28,7 @@
   .btn:hover {
     color: #ffbb33;
   }
-  p{
+  .text{
     font-weight: bold;
     display: flex;
     flex-direction: column;

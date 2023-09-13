@@ -32,7 +32,7 @@ function Home(){
             <section className={styles.home_container}>  
                 <LinkButton to='/form' text ="Ir Para Formulário"/>                
                 </section>
-                <div className={styles.sobre_container}>
+                <div className={styles.container}>
                 <h1 className={styles.publi}>Notícias</h1>   
                     <div id='itensContainer'>              
                     </div>   

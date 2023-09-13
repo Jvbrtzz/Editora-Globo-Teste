@@ -10,7 +10,7 @@
 h1{
     padding: 1em;
 }
-.sobre_container{
+.container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +32,7 @@ h1{
     margin: 10px 0; 
     text-align: center;
     width: 600px;
-    text-align: center;
+  
   }
   
 
